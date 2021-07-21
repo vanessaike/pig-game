@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #f56c6c 0%, rgba(255, 255, 255, 0) 100%), #d369a9;
+  background-repeat: no-repeat;
+}
+
+img {
+  width: 9rem;
+  border-radius: 1vh;
+}
+
+/* containers */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.player {
+  height: 35rem;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1vh;
+  background: rgba(244, 244, 244, 0.23);
+}
+
+.player__title {
+  /*clipping the background to the text and creating a linear gradient*/
+  background: linear-gradient(to right, #d13131, #a54880);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.current {
+  padding: 2rem;
+  margin-top: 5rem;
+  border-radius: 1vh;
+  background: linear-gradient(to right, #f16565, #b66f99);
+}
+
+/* buttons */
+
+.middle,
+.btns {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1.5rem;
+  min-width: 15rem;
+  margin-top: 2rem;
+  font-family: "poppins", sans-serif;
+  text-transform: uppercase;
+  border-style: none;
+  border-radius: 1vh;
+  background: rgba(244, 244, 244, 0.23);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f7f7f7b4;
+}
+
+/* classes added with JS */
+
+.active {
+  background-color: #f7f7f7b4;
+}
+
+.winner {
+  color: white;
+  background-color: rgb(41, 41, 41);
+}
+
+.hidden {
+  display: none;
+}
+
+/* bigger screens */
+
+@media only screen and (min-width: 700px) {
+  .app {
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .player {
+    width: 40rem;
+  }
+}
